@@ -1,0 +1,22 @@
+version: 0.1
+ 
+phases:
+  install:
+    commands:
+      - echo Nothing to do in the install phase...
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm -v
+      - node -v
+      - npm install -g yarn
+      - yarn --version
+      - cd app1 && yarn
+      - cd app2 && yarn
+      - cd app3 && yarn
+  post_build:
+    commands:
+      - echo Build completed on `date`
